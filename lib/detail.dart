@@ -15,6 +15,7 @@ class Detail extends StatefulWidget {
 
 class _DetailState extends State<Detail> {
   void deleteData() {
+    // Silahkan ganti URL nya sesuai HOST nya
     var url = Uri.parse("https://coba.xyz/mystore/deletedata.php");
     http.post(url, body: {"id": widget.list[widget.index]['id']});
   }

@@ -24,6 +24,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   Future<List> getData() async {
+    // Silahkan ganti URL nya sesuai HOST nya
     var url = Uri.parse("https://coba.xyz/mystore/getdata.php");
     final response = await http.get(url);
     return json.decode(response.body);
@@ -51,6 +52,7 @@ class _HomeState extends State<Home> {
       body: FutureBuilder<List>(
         future: getData(),
         builder: (context, snapshot) {
+          // ignore: avoid_print
           if (snapshot.hasError) print(snapshot.error);
           return snapshot.hasData
               ? ItemList(list: snapshot.data ?? [])

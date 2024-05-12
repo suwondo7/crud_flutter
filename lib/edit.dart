@@ -31,6 +31,7 @@ class _EditDataState extends State<EditData> {
   }
 
   void editData() {
+    // Silahkan ganti URL nya sesuai HOST nya
     var url = Uri.parse("https://coba.xyz/mystore/editdata.php");
     http.post(url, body: {
       "id": widget.list[widget.index]['id'],

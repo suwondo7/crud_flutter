@@ -16,6 +16,7 @@ class _AddDataState extends State<AddData> {
   TextEditingController controllerStock = TextEditingController();
 
   void addData() {
+    // Silahkan ganti URL nya sesuai HOST nya
     var url = Uri.parse("https://coba.xyz/mystore/adddata.php");
     http.post(url, body: {
       "itemcode": controllerCode.text,
